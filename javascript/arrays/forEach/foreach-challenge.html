@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>forEach challenge</title>
+	</head>
+	<body>
+		<div id="app"></div>
+		<script>
+			const todos = [
+				{ title: 'hacer el challenge', completed: false },
+				{ title: 'aprender JavaScript básico', completed: true },
+				{ title: 'aprender Python básico', completed: true },
+				{ title: 'entrenar CrossFit', completed: false },
+			];
+
+			const app = document.getElementById('app');
+
+			todos.forEach(todo => {
+				if (todo.completed) {
+					app.innerHTML += `<label><input type="checkbox" checked>${todo.title}</label><br>`;
+				} else {
+					app.innerHTML += `<label><input type="checkbox">${todo.title}</label><br>`;
+				}
+			});
+		</script>
+	</body>
+</html>
