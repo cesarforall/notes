@@ -1,0 +1,50 @@
+const orders = [
+    {
+      customerName: "Nicolas",
+      total: 60,
+      delivered: true,
+    },
+    {
+      customerName: "Zulema",
+      total: 120,
+      delivered: false,
+    },
+    {
+      customerName: "Santiago",
+      total: 180,
+      delivered: true,
+    },
+    {
+      customerName: "Valentina",
+      total: 240,
+      delivered: true,
+    },
+  ];
+  console.log("original", orders);
+
+// Extraer datos de un array
+
+  const rta = orders.map((item) => item.total);
+  console.log("rta", rta);
+
+// Transformar objetos de un array
+// Aunque el método map es inmutable, los objetos tienen su referencia en memoria
+// Si se añade o quita un key el objeto original se va a modificar
+  
+  // const rta2 = orders.map((item) => {
+  //   item.tax = 0.19;
+  //   return item;
+  // });
+  // console.log("rta2", rta2);
+  // console.log("original", orders);
+
+// Para evitar modificar el array original se usa spread operator y return
+
+  const rta3 = orders.map((item) => {
+    return {
+      ...item,
+      tax: 0.19,
+    };
+  });
+  console.log("rta3", rta3);
+  console.log("original", orders);
