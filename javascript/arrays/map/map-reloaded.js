@@ -28,8 +28,7 @@ const orders = [
   console.log("rta", rta);
 
 // Transformar objetos de un array
-// Aunque el método map es inmutable, los objetos tienen su referencia en memoria
-// Si se añade o quita un key el objeto original se va a modificar
+// El método map es inmutable pero actúa sobre la referencia en memoria
   
   // const rta2 = orders.map((item) => {
   //   item.tax = 0.19;
@@ -38,7 +37,7 @@ const orders = [
   // console.log("rta2", rta2);
   // console.log("original", orders);
 
-// Para evitar modificar el array original se usa spread operator y return
+// Para evitar modificar el array original se devuelve un objeto usando spread operator
 
   const rta3 = orders.map((item) => {
     return {
