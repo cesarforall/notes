@@ -48,10 +48,10 @@ Se encarga de la lógica de la aplicación.
 - Python cons Fast API, Flask o Django
 
 ## Framework
-Conjunto de librerías y reglas para contruir un producto digital.
+Conjunto de librerías y reglas para crear un producto de software.
 
 ## Librería
-Conjunto de archivos de código con funcionalidades comunes que ayudan al desarrollo de software.
+Código escrito por otros programadores que es aprovechable por otros proyectos.
 
 ## API
 Application Programming Interface. Sección del backend que permite la comunicación en Frontend y backend.
