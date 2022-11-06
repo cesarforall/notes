@@ -62,10 +62,16 @@ La comunicación se realiza mediante mensajes de ida y vuelta.
 Simple Objetct Access Protocol. Standard de comunicación API que mueve la información en XML (Extensible Markup Language). 
 
 ### REST
-Representational State Transfer. Standard de comunicación API que mueve la información en JSON (Javascript Objet Notation). Es lo mismo que un diccionario en Python.
+Representational State Transfer. Standard de comunicación API. Por medio de Http se mueve la información en JSON (Javascript Objet Notation). Es lo mismo que un diccionario en Python.
 
 ## Http
 Hypertext Transfer Protocol. Conjunto de reglas para la transferencia de datos entre cliente y servidor.
+
+- GET
+- POST
+- PUT
+- PATCH
+- DELETE
 
 ## Tipos de servidores
 ### Iaas
