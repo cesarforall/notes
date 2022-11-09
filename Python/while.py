@@ -1,0 +1,28 @@
+"""
+while True:
+  print('se ejecutó')
+  
+counter = 0
+
+while counter < 10:
+  counter += 1
+  print(counter)
+counter = 0
+
+# break termina un ciclo inmediatamente
+
+while counter < 20:
+  counter += 1
+  if counter == 15:
+    break
+  print(counter)
+"""
+
+counter = 0
+
+# continue salta a la siguiente iteración sin ejecutar las siguientes líneas
+while counter < 20:
+  counter += 1
+  if counter < 15:
+    continue
+  print(counter)
