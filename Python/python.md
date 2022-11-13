@@ -36,36 +36,35 @@
 - Local
 
 ## Higher order functions
-Las funciones pueden recibir como argumentos otras funciones
+Son funciones pueden recibir como argumentos otras funciones
 
 ## Módulos
-Los archivos con la extensión .py se consideran módulos. Normalmente contienen funciones con utilidades. También pueden contener variables pero es menos habitual.
+Un módulo es un fichero con la extensión .py que contiene funciones, clases o variables.
 
-Los módulos pueden ser usados de las siguientes formas:
-- Importanto el módulo en sí con 'import' para acceder a las funciones o variables.
-- Ejecutándolos como script con Python.
+### Acceso a un módulo
 
-Al importar el módulo y ejecutar el script actual la lógica completa del módulo se ejecuta.
+- Declaración import
+- Ejecución como script por consola
 
-Si necesitamos que no se ejecute encapsulamos el código dentro de una función y la validamos en el condicional
+Cuando se accede a un módulo desde otro módulo, al ejecutar el primero como script, si el segundo contiene ejecuciones también se ejecutarán.
+
+Para evitar este comportamiento dual se declara el punto de entrada con ejecución.
 
     def run():
         # content
     if __name__ == '__main__':
         run()
 
-De esta forma podemos ejecutar el módulo como script y como módulo haciendo el import
-
 ## Paquetes
 Un paquete es un directorio que contiene módulos
 
-Antes de la versión 3.3 de Python era obligatorio crear el archivo init para que Python reconozca el directorio como paquete
+Antes de la versión 3.3 de Python era obligatorio crear el archivo init para que Python reconozca el directorio como paquete.
 
 
     __init__.py
 
 
-En este archivo también se puede importar los módulos del paquete para que puedan ser usados directamente desde el archivo desde donde se importa el packete
+En este archivo también se puede importar los módulos del paquete para que puedan ser usados directamente desde el archivo desde donde se importa el paquete.
 
 ## Data science
 https://www.kaggle.com/

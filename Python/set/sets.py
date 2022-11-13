@@ -14,6 +14,7 @@ set_types = {
   1, 'hola', False, 12.12
 }
 print(set_types)
+print(len(set_types))
 
 set_from_string = set('hola')
 print(set_from_string)

@@ -14,8 +14,8 @@ print('| =>' ,set_a | set_b | set_c | set_d)
 set_e = set_c.intersection(set_d)
 print('.intersection() =>' ,set_e)
 
-# & devuelve los elemento comunes entre dos sets
-print(set_b & set_d)
+# & devuelve los elementos comunes entre dos sets
+print('&',set_b & set_d)
 
 # Difference
 # .difference() devuelve un set con los elementos del primero sin los elementos que son comunes con el segundo

@@ -33,7 +33,8 @@ print(result2)
 result3 = find_volume(width=10)
 print(result3)
 
-# return puede devolver múltiples valores. Al invocar a la función se devuelve una tupla
+# return puede devolver múltiples valores
+# Los valores se separan por comas y la estructura de datos es una tupla
 
 
 def find_volume2(length=1, width=1, depth=1):
