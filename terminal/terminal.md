@@ -427,3 +427,9 @@ Búsqueda por cantidad de caracteres
     ls -l nombre??.jpg
 
 - https://platzi.com/clases/2292-terminal/37346-wildcards/
+
+Ver la información de una sesión
+
+    pip install session-info
+    import session_info
+    session_info.show()
