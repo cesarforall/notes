@@ -379,10 +379,51 @@ Eliminar tilix
     sudo apt remove tilix
     sudo apt purge tilix
 
-    Instalar programa de fuentes Ubuntu
+Instalar programa de fuentes Ubuntu
 
-        sudo apt install font-manager
+    sudo apt install font-manager
 
-    Instalar las preferencias del sistema Ubuntu
+Instalar las preferencias del sistema Ubuntu
 
-        sudo apt install gnome-control-center
+    sudo apt install gnome-control-center
+
+## Libros
+### Terminal
+- Linux basics for hackers
+- The linux command line
+
+### Búsqueda
+- Grep - O'Reilly
+- Regular Expresion - O'Reilly
+
+### Linux
+- Linux - O'Reilly
+- vi and Vim Editors - O'Reilly
+
+## Wildcards
+
+Caracteres que terminen por
+     ls *.ext
+
+Caracteres que empiecen por
+     ls caracteres*
+
+Caracteres que empiecen por mayúscula
+     ls [[:upper:]]*
+
+Directorios que empiecen por mayúscula
+     ls -d [[:upper:]]*
+
+Directorios que empiecen por minúscula
+     ls -d [[:lower:]]*
+
+Búsqueda por caracteres que empiecen por 'a' e 'i'
+     ls -d [ai]*
+
+Búsqueda por rango de números
+    ls nombre[4-6]*
+
+Búsqueda por cantidad de caracteres
+    ls -l nombre??.jpg
+
+- https://platzi.com/clases/2292-terminal/37346-wildcards/

@@ -17,6 +17,7 @@ cat archivo.ext archivo.ext -> muestra en consola la concatenación de los archi
 cowsay "string" -> muestra un mensaje con una vaca
 
 echo "string" | lolcat -> muestra un color en el texto en consola
+    cowsay -f gnu No me puedo creer que haya otra vaca | lolcat
 
 cal -> muestra un calendario
 
