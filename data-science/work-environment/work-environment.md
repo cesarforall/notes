@@ -57,3 +57,45 @@ Ctrl + Shift + p abre la paleta de comandos
 - Material icon
 - Rainbow Brackets
 - Remote Development
+
+## Editor de código vs IDE
+Un IDE (entorno de desarrollo integrado) se enfoca a un solo lenguaje de programación y se maneja con archivos. Tiene todas la herramientas para trabajar en proyectos dicha tecnología.
+
+    - Visual Studio
+    - Android Studio (tiene su propio emulador)
+    - PyCharm
+
+Un editor de código soporta distintos lenguajes de programación y con pluggins y extensiones puede llegar a funcionar como un ide.
+
+    - VSCode
+    - Atom
+    - Sublime Text
+
+## Virtual Environmment
+Un ambiente virtual es un proyecto que puede tener sus propias dependencias, independientemente de las dependencias que puedan tener los demás proyectos alojados en la misma máquina
+
+## Conda
+Conda es un administrador de paquetes y ambientes virtuales para cualquier lenguaje de programación. Su versión completa AnaConda, a diferencia de la versión mini MiniConda, contiene todas las dependencias necesarias para trabajar con proyectos de Ciencia de Datos.
+
+- https://www.anaconda.com/products/distribution
+
+## Cómo instalar anaconda
+1. Descargar el archivo con el comando wget
+    wget -O anaconda.sh https://repo.anaconda.com/archive/Anaconda3-2022.10-Linux-x86_64.sh
+
+2. Ejecutar el instalador con el comando bash
+    bash anaconda.sh
+
+## Como trabajar con Conda
+Mostrar la información de Conda
+    conda info
+
+Crear un jupyter notebook retornará un enlace para el navegador
+
+    jupyter-notebook
+    o: http://localhost:8888/tree#notebooks
+
+Trabajar con notebooks desde VSCode
+- Instalar la extensión de Python
+- Abrir un notebook
+- Cambiar el kernel a: base (Python #.#.#) anaconda3/bin/python

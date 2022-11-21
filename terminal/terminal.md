@@ -1,3 +1,8 @@
+## Qué es la shell
+La terminal es la ventana que aloja la shell.
+La shell es un programa que toma comandos, los interpreta y los pasa al sistema operativo para hacer algo.
+Un comando es un programa que se puede ejecutar desde la terminal. Se le puede pasar parámetros y opciones.
+
 ## File descriptors (números)
 Al enviar un comando a la shell enviamos un standard input. La respuesta correcta del comando (existe y se puede ejecutar) devuelve un standard output. Si la respuesta es errónea devueleve un standard error
 
