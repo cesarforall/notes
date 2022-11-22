@@ -86,7 +86,7 @@ Conda es un administrador de paquetes y ambientes virtuales para cualquier lengu
 2. Ejecutar el instalador con el comando bash
     bash anaconda.sh
 
-## Como trabajar con Conda
+## Jupyter notebooks desde VSCode y la terminal
 Mostrar la información de Conda
     conda info
 
@@ -96,6 +96,77 @@ Crear un jupyter notebook retornará un enlace para el navegador
     o: http://localhost:8888/tree#notebooks
 
 Trabajar con notebooks desde VSCode
-- Instalar la extensión de Python
-- Abrir un notebook
-- Cambiar el kernel a: base (Python #.#.#) anaconda3/bin/python
+- Abrir VSCode desde WSL
+- Instalar la extensión de Python (si no está instalada)
+- Abrir un archivo jypiter notebook
+- Cambiar el kernel a: base (Python #.#.#) anaconda3/bin/python [o ambiente creado]
+
+## Ambientes con Conda
+Listar los ambientes instalados en el sistema
+    conda env list
+
+Para crear un nuevo ambiente se ejecuta el comando conda create. La opcion name agrega un nombre. Si no se especifica una versión se instalará la última disponible.
+    conda create --name py35 python=3.5 pandas
+
+Para activar un ambiente se usa el comando activate seguido del nombre del ambiente
+    conda activate py35
+
+Para desactivar un ambiente se ejecuta el comando deactivate
+    conda deactivate
+
+El comando conda list muestra una lista de todos los paquetes instalados en el ambiente
+    conda list
+
+Para buscar información de un paquete en específico se ejecuta el comando list seguido del nombre del paquete
+    conda list pandas
+
+Para actualizar un paquete específio se ejecuta el comando update seguido del nombre del paquete
+    conda update pandas
+
+Para instalar una versión distinta de un paquete se ejecuta el comando install seguido del nombre del paquete y la versión
+    conda install pandas=1.2
+
+- IMPORTANTE: instalar una versión distinta de un paquete puede ocasionar incompatibilidades. Si existen la instalación falla. Para solucionarlas, Conda, devuelve un mensaje con las compatibilidades. Se instala nuevamente los paquetes con las versiones compatibles.
+    conda install python=3.9 pandas=1.2
+
+Para clonar un ambiente se ejecuta el comando conda create con las opciones name copy y clone
+    conda create --name py39 --copy --clone py35
+
+Para desinstalar una librería se usa el comando remove seguido del nombre de la librería
+    conda remove pandas
+
+Para eliminar una entorno se usa el comando env remove seguido de la opción nombre y el nombre del ambiente
+    conda env remove --name py35
+
+- No se puede eliminar un entorne que está activado (que se está usando)
+
+## Comandos con Conda
+- Importante: es una buena práctica no modificar el ambiente base
+
+Cuando Conda no tiene información sobre un paquete que se le pide instalar se puede buscar un canal que si lo tenga en el buscador de https://anaconda.org/
+
+Para instalar un paquete desde un canal se ejecuta el comando install con la opción channel y el nombre del paquete
+    conda install --channel conda-forge boltons
+
+Cada vez que se modifica una librería el ambiente genera revisiones. Estas son un tracking del estado del ambiente y se pueden usar para volver en el tiempo.
+
+Para consultar las revisiones de un ambiente se ejecuta el comando list con el flag --revision
+    conda list --revision
+
+Para volver en el tiempo se ejecuta el comando install seguido del flag revision y el número de revisión
+    conda install --revision 0
+
+Para exportar un ambiente se ejecuta el comando env seguido de export. Esta ejecución genera un archivo.
+    conda env export
+
+Para exportar un ambiente solo con los nombres y versiones y paquetes se ejecuta el comando env export --no-buils
+    conda env export --no-build
+
+Para exportar un ambiente solo con los paquetes instalados manualmente se ejecuta el comando env export --from-history
+    conda env export --from-history
+
+Para exportar un ambiente a un archivo se ejecuta el comando env export con el flag --file seguido del nombre del archivo. Una extensión habitual es .yml
+    conda env export --from-history --file py39.yml
+
+Para instalar un ambiente desde un archivo se ejecuta el comando create seguido del flag file y el nombre del archivo
+    conda env create --filr py39.yml

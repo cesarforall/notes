@@ -3,6 +3,17 @@ La terminal es la ventana que aloja la shell.
 La shell es un programa que toma comandos, los interpreta y los pasa al sistema operativo para hacer algo.
 Un comando es un programa que se puede ejecutar desde la terminal. Se le puede pasar parámetros y opciones.
 
+## Comando
+Un comando puede ser:
+1. Un programa ejecutable compilado en algún lenguaje de programación. Suelen estar en /usr/bin/
+2. Un comando de utilidad shell. Es una función de la shell que viene por defecto.
+3. Una función de shell externa a la shell.
+4. Un alias.
+
+El comando type muestra la naturaleza de los comandos.
+
+- https://platzi.com/blog/41-comandos-terminal/
+
 ## File descriptors (números)
 Al enviar un comando a la shell enviamos un standard input. La respuesta correcta del comando (existe y se puede ejecutar) devuelve un standard output. Si la respuesta es errónea devueleve un standard error
 

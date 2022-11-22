@@ -73,3 +73,5 @@ wget -O name.ext -> descarga lo que hay una ruta con un nuevo nombre
 traceroot website -> muestra todas las computadoras por donde pasa la información
 
 netstat -i -> muestra los dispositivos de red
+
+whatis -> muestra un descripción corta de un comando
