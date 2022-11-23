@@ -169,4 +169,43 @@ Para exportar un ambiente a un archivo se ejecuta el comando env export con el f
     conda env export --from-history --file py39.yml
 
 Para instalar un ambiente desde un archivo se ejecuta el comando create seguido del flag file y el nombre del archivo
-    conda env create --filr py39.yml
+    conda env create --file py39.yml
+
+Desactivar el inicio acutomático del entorno base de conda
+    conda config --set auto_activate_base false
+
+## Mamba
+Mamba es un reimplementation de conda en C++ diseñada para acelerar los procesos.
+
+- https://mamba.readthedocs.io/en/latest/
+
+Instalar Mamba desde cero con miniforge
+- https://mamba.readthedocs.io/en/latest/installation.html
+- https://github.com/conda-forge/miniforge#mambaforge
+    wget "https://github.com/conda-forge/miniforge/releases/latest/download/Mambaforge-$(uname)-$(uname -m).sh" bash Mambaforge-$(uname)-$(uname -m).sh
+
+Instalar Mamba desde la terminal
+    conda install mamba -n base -c conda-forge
+
+Mostrar la ayuda de Mamba
+    mamba --help
+
+Instalar librerías con Mamba
+    mamba create -n nameofmyenv <list of packages>
+
+## Divide y vencerás
+Separar un problema en partes pequeñas y resolverlas individualmente
+
+Aplicando esta técnica a los entornos evita problemas de compatibilidades cuando se generan actualizaciones.
+
+Se recomienda trabajar con varios entornos de trabajo en mismo proyecto, cada uno separado por ambientes externos, ambientes modelo y ambiente comunicación
+- proyecto_01
+    - data
+    - models
+    - notebooks
+    - envs
+        - external.yml
+        - model.yml
+        - comunication.yml
+
+Snakemake es un motor de flujo de trabajo que permite ejecutar un entorno distinto según la etapa en la que se encuentre
