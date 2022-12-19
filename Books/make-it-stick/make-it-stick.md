@@ -1,0 +1,1 @@
+- El repasar mentalmente lo aprendido por la noche acostado antes de dormir cuenta como recuperación espaciada.
