@@ -284,7 +284,7 @@ Para dejar el edito en segundo plano se usa el comando Ctrl + z
 El comando jobs muestra los procesos en segundo plano
 
     jobs
-    [#]+ Stopped            cat > file.txt
+    [n]+ Stopped            cat > file.txt
 
 El comando fg (foreground) trae el proceso al primer plano
 
@@ -296,7 +296,7 @@ El operador de control & al final de un comando envía el proceso directamente a
 
 Para enviar un proceso al segundo plano
 
-    bg #
+    bg %n
 
 Primero se suspende el proceso con Ctrl + z
 Luego se ejecuta el comando bg #
