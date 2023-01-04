@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div p {
+            color: lime;
+        }
+
+        div>div {
+            background: red;
+        }
+
+        div~p {
+            color: blueviolet;
+        }
+
+        div+div {
+            background: yellowgreen;
+        }
+
+        a[href="gg"] {
+            background: white;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <p>Párrafo</p>
+        <div>Div dentro de div</div>
+        <p>Párrafo</p>
+        <p>Párrafo</p>
+    </div>
+    <div>Otro div
+        <p>Párrafo dentro de div</p>
+        <div>
+            <div>
+                <div>jsjsjs</div>
+                <p>párrafo</p>
+            </div>
+            <a href="gg">Ir a algúinxsitio</a>
+        </div>
+    </div>
+</body>
+
+</html>

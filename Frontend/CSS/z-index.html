@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        div {
+            position: absolute;
+            /* background: palegoldenrod; */
+        }
+        .one {
+            display: none;
+            z-index: 6;
+        }
+        .two {
+            display: none;
+            z-index: 5;
+        }
+        .red {
+            /* position: absolute; */
+            width: 25px;
+            height: 25px;
+            background: red;
+            z-index: 6;
+        }
+        .blue {
+            width: 60px;
+            height: 60px;
+            background: blue;
+            z-index: 5;
+        }
+        .yellow {
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            background: yellow;
+            z-index: 10;
+        }
+        .green {
+            width: 20px;
+            height: 20px;
+            background: green;
+        }
+        .violet {
+            width: 20px;
+            height: 20px;
+            background: violet;
+            z-index: 6;
+        }
+        p {
+            position: relative;
+            top: 100px;
+        }
+    </style>
+</head>
+<body>
+    <div class="one">Div</div>
+    <div class="two">Random</div>
+    <section>
+        <div class="red">Red</div>
+        <div class="blue">Blue
+            <div class="yellow">Yellow</div>
+            <div class="green">Green</div>
+            <div class="violet">Violet</div>
+        </div>
+    </section>
+    <p>El valor z-index empieza desde 0. Mientras más valor, más cerca estará de la pantalla</p>
+    <p>Por más valor en z.index que tenga un elemento hijo, este nunca va a sobreponerse por encima de un elemento hermano del padre que tenga mayor valor que el padre.</p>
+</body>
+</html>

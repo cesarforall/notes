@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        section {
+            display: flex;
+            justify-content: center;
+            width: 100%;
+        }
+        .propiedades {
+            padding-top: 20px;
+            align-items: center;
+            flex-direction: column;
+        }
+
+        .card {
+            position: relative;
+            width: 85.6mm;
+            height: 53.98mm;
+            background: honeydew;
+            border-radius: 20px;
+            overflow: hidden;
+        }
+        .card img {
+            width: 100%;
+        }
+        .card p {
+            top: 0;
+            left: 30px;
+            position: absolute;
+            color: white;
+            text-align: center;
+            /* font-weight: bold; */
+            z-index: 10;
+        }
+        .card .title {
+            top: 5px;
+            left: 30px;
+        }
+        .card .number {
+            top: 120px;
+        }
+        .card .name {
+            top: 140px;
+        }
+        /* .card :nth-child(2) {
+            color: blueviolet;
+        } */
+        thead {
+            font-weight: bold;
+        }
+
+        td {
+            padding: 10px;
+            background: whitesmoke;
+        }
+
+        ul {
+            padding: 0;
+        }
+
+        li {
+            list-style: none;
+        }
+    </style>
+</head>
+
+<body>
+    <section>
+        <div class="card">
+            <img src="https://images.pexels.com/photos/617278/pexels-photo-617278.jpeg" alt="kitten">
+            <p class="title">MasterCat</p>
+            <p class="number">0000 0000 0000 0000</p>
+            <p class="name">Tommy Catson</p>
+        </div>
+    </section>
+    <section class="propiedades">
+        <h2>Propiedades más usadas</h2>
+        <table>
+            <thead>
+                <tr>
+                    <td>Propiedad</td>
+                    <td>Valor</td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Layout</td>
+                    <td>
+                        <ul>
+                            <li>display</li>
+                        </ul>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Texto</td>
+                    <td>
+                        <ul>
+                            <li>font-size</li>
+                            <li>font-weight</li>
+                            <li>font-family</li>
+                            <li>text-align</li>
+                            <li>color</li>
+                        </ul>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Modelo de caja</td>
+                    <td>
+                        <ul>
+                            <li>margin</li>
+                            <li>padding</li>
+                            <li>border</li>
+                        </ul>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Tamaños</td>
+                    <td>
+                        <ul>
+                            <li>width</li>
+                            <li>height</li>
+                        </ul>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Colores de fondo</td>
+                    <td>
+                        <ul>
+                            <li>background</li>
+                            <li>background-color</li>
+                        </ul>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+</body>
+
+</html>

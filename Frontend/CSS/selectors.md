@@ -1,4 +1,20 @@
 # Selectors
+## Anatomía de un selector
+- Selector
+    - Propiedad
+    - Valor
+
+    p {
+        propiedad: valor;
+    }
+## Tipos de selectores
+- Tipo -> etiqueta {}
+- Clase -> .clase {}
+- Id -> #id {}
+- Atributo -> a[href=""] {}
+- Universal -> * {}
+
+## Selectores combinadores
 |||
 |---|---|
 |a, b|Multiple Element Selector|

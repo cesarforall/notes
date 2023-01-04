@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        /* Sección especificidad */
+        h1 {
+            color: red;
+        }
+
+        h1 {
+            color: blue;
+        }
+
+        tr>td:first-child {
+            text-align: right;
+        }
+
+        td {
+            background: whitesmoke;
+        }
+
+        /* Sección ejemplo */
+        #ejemplo {
+            color: steelblue;
+        }
+        .ejemplo {
+            color: mediumseagreen;
+        }
+    </style>
+</head>
+
+<body>
+    <section>
+        <h1>Especificidad</h1>
+        <table>
+            <tr>
+                <td>❎0️⃣0️⃣0️⃣0️⃣</td>
+                <td>!important</td>
+            </tr>
+            <tr>
+                <td>❎0️⃣0️⃣0️⃣</td>
+                <td>Estilos en línea</td>
+            </tr>
+            <tr>
+                <td>❎0️⃣0️⃣</td>
+                <td>Id</td>
+            </tr>
+            <tr>
+                <td>❎0️⃣</td>
+                <td>Clases, atributos y psudoclases</td>
+            </tr>
+            <tr>
+                <td>❎</td>
+                <td>Elementos y pseudoelementos</td>
+            </tr>
+            <tr>
+                <td>0️⃣</td>
+                <td>Selector universal</td>
+            </tr>
+        </table>
+        <div>
+            <p>Para calcular la especificidad se crean 3 espacios donde el del izquierdo hará el recuento de id, el del
+                centro el de clases y pseudoclases, y el tercero de elementos</p>
+            <p>[id][clases, atributos y pseudoclases][elementos y pseudoelementos]</p>
+        </div>
+    </section>
+    <section>
+        <h2>Ejemplo</h2>
+        <div id="ejemplo" class="ejemplo">Este es un ejemplo de especificidad</div>
+    </section>
+</body>
+
+</html>
