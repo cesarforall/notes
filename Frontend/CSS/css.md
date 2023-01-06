@@ -1,6 +1,3 @@
-## Elementos vacíos
-Los elementos vacíos no tienen contenido en texto o HTML. Se representan con una sola etiqueta donde el final es un slash de cierre.
-
 ## Pseudoclases
 Se aplican a los selectores y especifican el comportamiento de un estado.
 - :active
