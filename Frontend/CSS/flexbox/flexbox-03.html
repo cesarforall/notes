@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Flexbox</title>
+		<style>
+			html {
+				box-sizing: border-box;
+			}
+			*,
+			*:before,
+			*:after {
+				box-sizing: inherit;
+			}
+			html * {
+				font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+			}
+			body {
+				margin: 0;
+			}
+			.flexbox {
+				/* display: inline-flex; alternative*/
+				display: flex;
+				/* flex-direction: row; default*/
+				flex-direction: row-reverse;
+				/* flex-wrap: nowrap; default*/
+				flex-wrap: wrap;
+				/* align-items; actúa sobre el eje cruzado */
+				/* align-items: stretch; los elementos que no tienen height crecerán hasta ocupar la misma altura que el más alto*/
+				/* align-items: flex-start; los elementos se situarán al principio del eje*/
+				/* align-items: flex-end; los elementos se situarán al final del eje*/
+				/* align-items: center; los elementos se situarán en el centro del eje*/
+				align-items: stretch;
+				border: 1px solid darkslateblue;
+			}
+			.item {
+				/* flex-basis: auto; default. Cuando no tiene width*/
+				border: 1px solid rebeccapurple;
+				width: 130px;
+				/* height: 80px; */
+				background: mediumpurple;
+				color: lavender;
+				/* flex: initial = flex: 0 1 auto; flex-grow flex-shrink flex-basis*/
+				/* flex: auto = flex: 1 1 auto; flex-grow flex-shrink flex-basis*/
+				/* flex: none = flex: 0 0 auto; flex-grow flex-shrink flex-basis*/
+				/* flex: <positive-number> = flex: positive-number positive-number 0; flex-grow flex-shrink flex-basis*/
+			}
+			.item3 {
+				height: 30px;
+				/* width: 50px; */
+				background: purple;
+				/* flex-grow: 1; Ocupa el espacio libre del contenedor flex padre. Si otros items tienen esta propiedad se hace el reparto equitativo según el valor declarado*/
+				flex-grow: 1;
+			}
+			.item7 {
+				/* width: 60px; */
+				height: 100px;
+				background: mediumslateblue;
+				/* flex-grow: 2; */
+			}
+			.item11 {
+				width: 180px;
+				background: darkorchid;
+				flex-shrink: 1;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="flexbox">
+			<div class="item">1</div>
+			<div class="item">2</div>
+			<div class="item item3">3</div>
+			<div class="item">4</div>
+			<div class="item">5</div>
+			<div class="item">6</div>
+			<div class="item item7">7</div>
+			<div class="item">8</div>
+			<div class="item">9</div>
+			<div class="item">10</div>
+			<div class="item item11">Esto va a tener tanto texto que se va a necesitar un align-items stretch</div>
+			<div class="item">12</div>
+		</div>
+	</body>
+</html>
