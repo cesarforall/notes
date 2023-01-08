@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+		<style>
+			/* box-sizing: border-box; es buena práctica añadir border-box al selector de html e inherit a *, *:before y *::after, la modificación de box-sizing en elementos padre sí modificará a los elementos hijo*/
+			html {
+				box-sizing: border-box;
+			}
+			*,
+			*:before,
+			*:after {
+				box-sizing: inherit;
+			}
+			/* En el caso de usar normalize.css, la declaración de border-box se haría con la compatibilidad de otros navegadores y en la parte superior del primer documento de estilos después de normalize*/
+			/* html {
+				-webkit-box-sizing: border-box;
+				-moz-box-sizing: border-box;
+				box-sizing: border-box;
+			} */
+			/* Los dos puntos y dos dobles puntos se diferencian por la versión de CSS 2 y CSS3. Desde la 3 se recomienda poner los dobles para diferenciar pseudaclases de pseudoelementos, es buena práctica. En el caso de no ponerlos, los navegadores actualizados mantienen la compatibilidad. Si se prevee el uso de un navegador con una versión bastante inferior (en Explorer la 8) se recomienda poner solo dos puntos*/
+			/* *,
+			*::before,
+			*::after {
+				-webkit-box-sizing: inherit;
+				-moz-box-sizing: inherit;
+				box-sizing: inherit;
+			} */
+            /* Para declarar una fuente global se usan los selectores html y * */
+			html * {
+				font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+			}
+            /* margin: 0; elimina el margin por defecto del elemento body. Normalize.css lo trae por defecto */
+			body {
+				margin: 0;
+			}
+		</style>
+	</head>
+	<body></body>
+</html>
