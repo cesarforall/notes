@@ -1,3 +1,23 @@
+## Importar un proyecto a Github
+- https://docs.github.com/en/get-started/importing-your-projects-to-github/importing-source-code-to-github/adding-locally-hosted-code-to-github
+
+### Usando Git
+1. Crear un nuevo repositorio en Github
+
+2. Ejecutar git con la rama main
+    git init -b main
+
+3. Montar y hacer commit del proyecto
+    git add .
+    git commit -m "initial commit"
+
+4. Añadir el origen
+    git remote add origin <REMOTE_URL>
+    git remote -v
+
+5. Hacer push
+    git push origin main
+
 ## Rebase
 
     git rebase main
