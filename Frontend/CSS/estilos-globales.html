@@ -9,12 +9,16 @@
 			/* box-sizing: border-box; es buena práctica añadir border-box al selector de html e inherit a *, *:before y *::after, la modificación de box-sizing en elementos padre sí modificará a los elementos hijo*/
 			html {
 				box-sizing: border-box;
+				font-size: 62.5%;
+				font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 			}
+
 			*,
 			*:before,
 			*:after {
 				box-sizing: inherit;
 			}
+
 			/* En el caso de usar normalize.css, la declaración de border-box se haría con la compatibilidad de otros navegadores y en la parte superior del primer documento de estilos después de normalize*/
 			/* html {
 				-webkit-box-sizing: border-box;
@@ -29,14 +33,21 @@
 				-moz-box-sizing: inherit;
 				box-sizing: inherit;
 			} */
-            /* Para declarar una fuente global se usan los selectores html y * */
-			html * {
-				font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-			}
-            /* margin: 0; elimina el margin por defecto del elemento body. Normalize.css lo trae por defecto */
-			body {
+			/* margin: 0; elimina el margin por defecto de todos los elementos. Normalize.css lo trae por defecto. */
+			/* padding: 0; elimina el padding por defecto de todos los elementos. */
+			* {
 				margin: 0;
+				padding: 0;
 			}
+
+			/*
+			1. Position
+			2. Box model
+			3. Display
+			4. Tipography
+			5. Visuals
+			6. Others
+			*/
 		</style>
 	</head>
 	<body></body>
