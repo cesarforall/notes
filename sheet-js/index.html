@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <body>
+        <input type="file" name="" id="input-file">
+        <table id="table"></table>
+        <script type="text/javascript" src="./xlsx.full.min.js"></script>
+        <script>
+            const inputFileElement = document.getElementById('input-file');
+            const tableElement = document.getElementById('table');
+            inputFileElement.addEventListener('change', handleFileAsync, false);
+
+            async function handleFileAsync(e) {
+                /* get first file */
+                const file = e.target.files[0];
+
+                /* get raw data */
+                const data = await file.arrayBuffer();
+
+                /* data is an ArrayBuffer */
+                const wb = XLSX.read(data, { cellText: false, cellDates: true });
+                console.log(wb);
+
+                /* do something with the workbook here */
+                const sheetNames = wb.SheetNames;
+                const theSheetName = sheetNames[0];
+                const theSheet = wb.Sheets[theSheetName];
+                const sheetToJsonSpareParts = XLSX.utils.sheet_to_json(theSheet, { range: 'A4:A463' });
+                const sheetToJsonModels = XLSX.utils.sheet_to_json(theSheet, { range: 'C3:AE3' });
+                console.log(sheetToJsonSpareParts);
+                console.log(sheetToJsonModels);
+                tableElement.innerHTML = XLSX.utils.sheet_to_html(theSheet);
+            }
+        </script>
+    </body>
+</html>
