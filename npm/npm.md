@@ -50,3 +50,27 @@ Para ejecutar otros comandos que no estén por defecto se ejecutará npm run ali
 # npx
 
 npx (Node package execute) ejecuta directamente los paquetes sin tener que instalarlos previamente ni hacer una instancia de los mismos.
+
+## Trabajar con otros proyectos
+Instalar las dependencias de un proyecto ya desarrollado puede generar varios conflictos:
+
+### Peer dependencies
+Peer dependencies expresa la compatibilidad de una dependencia con el proyecto o dependencia. Para ello se especifica una versión o versión base desde la que se puede trabajar en el proyecto.
+
+  {
+    "name": "tea-latte",
+    "version": "1.3.5",
+    "peerDependencies": {
+      "tea": "2.x"
+    }
+  } 
+
+Al hacer la instalación, si la peer dependency no está actualizada, el programa muestra un warning.
+
+Se soluciona instalando la versión correcta de la dependencia.
+
+### Vulnerabilities
+- Low
+- Moderate
+- High
+- Critical
