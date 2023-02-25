@@ -47,3 +47,6 @@ Para ejecutar otros comandos que no estén por defecto se ejecutará npm run ali
 
         }
 
+# npx
+
+npx (Node package execute) ejecuta directamente los paquetes sin tener que instalarlos previamente ni hacer una instancia de los mismos.
