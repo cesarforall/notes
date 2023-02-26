@@ -54,6 +54,8 @@ npx (Node package execute) ejecuta directamente los paquetes sin tener que insta
 ## Trabajar con otros proyectos
 Instalar las dependencias de un proyecto ya desarrollado puede generar varios conflictos:
 
+npm outdate muestra en pantalla una tabla con las versiónes del proyecto, las requeridas por el mismo y las más actuales en el gestor de paquetes.
+
 ### Peer dependencies
 Peer dependencies expresa la compatibilidad de una dependencia con el proyecto o dependencia. Para ello se especifica una versión o versión base desde la que se puede trabajar en el proyecto.
 
