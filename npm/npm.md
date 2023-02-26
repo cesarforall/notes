@@ -104,3 +104,14 @@ npm [comando] --dd muestra todo el proceso del comando en pantalla
 
 Crear en comando en package.json para que haga todo el proceso:
 json // package.json { "scripts": { "phoenix": "rm -f package-lock.json && rm -rf ./node_modules && npm i --no-fund --no-audit" } }
+
+## Publicar paquetes
+El nombre del repositorio debe ser el mismo que el del paquete, por lo tanto, antes de crear el repositorio se hará una búsqueda por nombre del paquete en npmjs.com.
+
+npm link instala de forma global el paquete actual
+
+npm install ruta/del/directorio instala el paquete en el directorio actual
+
+npm adduser agrega el usuario de npmjs.com
+
+npm publish publica el paquete
