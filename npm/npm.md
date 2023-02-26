@@ -115,3 +115,9 @@ npm install ruta/del/directorio instala el paquete en el directorio actual
 npm adduser agrega el usuario de npmjs.com
 
 npm publish publica el paquete
+
+## Actualizar paquetes
+Para actualizar paquetes el repositorio debe estar actualizado y subido, es decir, limpio.
+La versión al actualizar el paquete debe ser distinta que la anterior o npm devolverá un error.
+npm version 0.0.0 cambia la versión de un paquete o proyecto y hace un commit.
+npm pusblish publica la última versión del proyecto.
