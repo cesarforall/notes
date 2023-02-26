@@ -74,3 +74,11 @@ Se soluciona instalando la versión correcta de la dependencia.
 - Moderate
 - High
 - Critical
+
+## Resolver conflictos
+npm audit muestra en pantalla los conflictos de dependencias en los proyectos.
+
+npm audit fix resuelve algunos conflictos
+npm audit fix --force resuelve más conflictos todavía
+
+Ejecutar la instalación más reciente de un paquete que sigue teniendo conflictos puede resolver el conflicto
