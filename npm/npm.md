@@ -84,3 +84,23 @@ npm audit fix resuelve algunos conflictos
 npm audit fix --force resuelve más conflictos todavía
 
 Ejecutar la instalación más reciente de un paquete que sigue teniendo conflictos puede resolver el conflicto
+
+## Eliminar dependencias
+npm uninstall nombre-de-la-dependencia elimina una dependencia del proyecto.
+
+También se puede eliminar la key value de la dependencia en package.json, eliminar la campeta node_modules e intalar todo de nuevo. Esta forma de hacerlo limpia el proyecto como añadido
+
+rm -rf node_modules
+npm install
+
+## Instalacion limpia
+npm ci instala las dependencias de una forma limpia
+Requiere que exista un package-lock.json en el proyecto o si no devolverá un error
+Si se usa en lugar de install se debe proveer de los flags igual que si se usase install
+Se usa en entornos automatizados o de integración continua. No sobreescribe package.json ni package-lock.json, no los sincroniza. Se limita a instalar lo que está declarado.
+
+## Comandos adicionales
+npm [comando] --dd muestra todo el proceso del comando en pantalla
+
+Crear en comando en package.json para que haga todo el proceso:
+json // package.json { "scripts": { "phoenix": "rm -f package-lock.json && rm -rf ./node_modules && npm i --no-fund --no-audit" } }
