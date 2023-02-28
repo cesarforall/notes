@@ -19,6 +19,19 @@ npx webpack --mode production --config webpack.config.js -> ejecuta webpack con 
 ### webpack.config.js
 El archivo de configuración webpack exporta un entry, output y resolve.
 
+    const path = require('path');
+
+    module.exports = {
+        entry: './src/index.js',
+        output: {
+            path: path.resolve(__dirname, 'dist'),
+            filename: 'main.js'
+        },
+        resolve: {
+            extensions: ['.js'],
+        },
+    };
+
 #### entry
 'entry' especifica en un string la ruta desde el archivo raíz hacia el script principal del proyecto.
 
