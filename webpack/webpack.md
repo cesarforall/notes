@@ -113,3 +113,19 @@ Trabaja javascript moderno
 ### @babel/plugin-transfor-runtime
 
 Trabaja con el asincronismo de javascript
+
+
+## Webpack con html
+Trabajar con html desde webpack se hace mediante el plugin html-webpoack-plugin.
+
+Primero se require desde el archivo de configuración de webpack.
+
+    const HtmlWebpackPlugin = require('html-webpack-plugin');
+
+    plugins: [new HtmlWebpackPlugin({
+        inject: true,
+        template: './public/index.html',
+        filename: 'index.html'
+    })]
+
+Luego se elimina cualquier script desde el html original porque webpack lo creará.
