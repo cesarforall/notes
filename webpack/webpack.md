@@ -129,3 +129,26 @@ Primero se require desde el archivo de configuración de webpack.
     })]
 
 Luego se elimina cualquier script desde el html original porque webpack lo creará.
+
+## Webpack con css y preprocesadores
+
+webpack.confij.css
+
+      {
+        test: /\.css|.styl$/i,
+        use: [MiniCssExtractPlugin.loader,
+          'css-loader',
+          'stylus-loader'
+        ],
+      }
+
+index.js      
+
+    import './styles/vars.styl';
+
+vars.styl
+
+    $color-black = red 
+
+    body
+    color $color-black
