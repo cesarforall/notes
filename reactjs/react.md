@@ -19,12 +19,16 @@ El ciclo de vida es el sistema que tiene React para crear, trabajar con ellos y 
 El lugar donde almacenamos y actualizamos dinánicamente información de la aplicación y los usuarios.
 
 ## Dependencias React
+
 Añadir como dependencias base:
+
 - react
 - react-dom
 
 ## Dependencias Webpack y Babel en React
-Las dependencias que se usan en React para trabajar con Webpack y Babel son:
+
+Las dependencias de desarrollo que se usan en React para trabajar con Webpack y Babel son:
+
 - @babel/core
 - @babel/preset-env
 - @babel/preset-react
