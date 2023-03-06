@@ -3,6 +3,7 @@
 Webpack empaqueta los archivos de un proyecto optimizando su rendimiento. Usa un punto de entrada y entiende el grafo del proyecto. Usa loaders y plugins para entender el código.
 
 ## Loaders vs plugins
+
 Los loaders permiten a webpack trabajar con extensiones o tipos de archivos que no admite por defecto.
 
 Los plugins agregan funcionalidades nuevas webpack.
@@ -52,7 +53,7 @@ El archivo de configuración webpack exporta un entry, output y resolve.
 
 'output' especifica el directorio y archivo de salida.
 
-Se usa path.resolve(__dirname, 'name') para especificar el directorio actual usando el módulo path. Este módulo actualmente ya forma parte de Node.
+Se usa path.resolve(\_\_dirname, 'name') para especificar el directorio actual usando el módulo path. Este módulo actualmente ya forma parte de Node.
 
 Para el archivo de salida se especifica el nombre del en el key filename.
 
@@ -99,6 +100,21 @@ La configuración que busca babel se declara en .babelrc con los presets y plugi
 
 }
 
+Se usa la configuración .babelrc cuando se tiene como objetivo el directorio donde está. Si es una configuración global se puede añadir en webpack.config.js
+
+    {
+    "presets": [
+        "@babel/preset-env",
+        [
+            "@babel/preset-react",
+            {
+                "runtime": "automatic"
+            }
+        ]
+    ]
+
+}
+
 ## Instalar babel para webpack
 
     npm install babel-loader @babel/core @babel/preset-env @babel/plugin-transform-runtime
@@ -119,8 +135,8 @@ Trabaja javascript moderno
 
 Trabaja con el asincronismo de javascript
 
-
 ## Webpack con html
+
 Trabajar con html desde webpack se hace mediante el plugin html-webpoack-plugin.
 
 Primero se require desde el archivo de configuración de webpack.
@@ -137,6 +153,8 @@ Luego se elimina cualquier script desde el html original porque webpack lo crear
 
 ## Webpack con css y preprocesadores
 
+ npm install mini-css-extract-plugin css-loader style-loader sass -D -> para instalar los paquetes necesarios
+
 webpack.confij.css
 
       {
@@ -147,13 +165,13 @@ webpack.confij.css
         ],
       }
 
-index.js      
+index.js
 
     import './styles/vars.styl';
 
 vars.styl
 
-    $color-black = red 
+    $color-black = red
 
     body
     color $color-black

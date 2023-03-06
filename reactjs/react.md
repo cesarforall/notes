@@ -31,7 +31,23 @@ Las dependencias de desarrollo que se usan en React para trabajar con Webpack y 
 
 - @babel/core
 - @babel/preset-env
-- @babel/preset-react
+- @babel/preset-react. Este plugin tiene por defecto la opción runtime como classic. La otra opción es automatic y detecta automáticamente el código en jsx y lo transforma. No necesita el import de React. Esto viene de la nueva funcionalidad de React 17, el cuál no necesita crear archivos. jsx.
+
+      {
+      "presets": [
+          "@babel/preset-env",
+          [
+              "@babel/preset-react",
+              {
+                  "runtime": "automatic"
+              }
+          ]
+      ]
+
+  }
+
+(En el caso de querer eliminar los imports) -> npx react-codemod update-react-imports
+
 - html-loader
 - html-webpack-plugin
 - webpack
