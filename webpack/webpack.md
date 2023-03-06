@@ -2,6 +2,11 @@
 
 Webpack empaqueta los archivos de un proyecto optimizando su rendimiento. Usa un punto de entrada y entiende el grafo del proyecto. Usa loaders y plugins para entender el código.
 
+## Loaders vs plugins
+Los loaders permiten a webpack trabajar con extensiones o tipos de archivos que no admite por defecto.
+
+Los plugins agregan funcionalidades nuevas webpack.
+
 ## Instalar webpack
 
 npm install webpack -> instala webpack en el proyecto actual
