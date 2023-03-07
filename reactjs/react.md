@@ -53,3 +53,14 @@ Las dependencias de desarrollo que se usan en React para trabajar con Webpack y 
 - webpack
 - webpack-cli
 - webpack-dev-server
+
+## Componentes
+Un componente se define con una función y retorna una etiqueta con sus atributos al ser renderizado. Admite props o atributos como argumentos. Se define en un módulo de javascript (export default Componente). Se nombra con mayúscula por convención. A partir de React 17 se puede usar usar la extensión .js en lugar de .jsx.
+
+Para trabajar con componentes dentro de otros componentes se usa la sintaxis <ComponenteHijo /> para compontes únicos o <ComponentePadre><ComponentePadre /> para componentes que van a admitir anidación.
+
+Para que un componente admita anidación se declara un objecto children dentro de la función de creación del componete.
+
+    const ComponentePadre = ({children}) => {
+        return (<div>{children}</div>)
+    }
