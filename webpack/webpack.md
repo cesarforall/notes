@@ -175,3 +175,8 @@ vars.styl
 
     body
     color $color-black
+
+### mini-css-extract-plugin
+Este plugin permite que webpack entienda un import de estilos (ruta) dentro de un módulo javascript o en el caso de react un módulo correcpondiente a un componente
+
+    import './src/styles/Login.csss'
