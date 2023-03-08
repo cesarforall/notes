@@ -64,3 +64,12 @@ Para que un componente admita anidación se declara un objecto children dentro d
     const ComponentePadre = ({children}) => {
         return (<div>{children}</div>)
     }
+
+## react-routes-dom
+React Routes DOM maneja rutas en aplicaciones para el navegador.
+
+A partir de v6 se hacen algunos cambios:
+
+- Switch -> Routes
+- component -> element
+- {Componente} -> {<Componente/>}
