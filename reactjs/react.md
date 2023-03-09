@@ -73,3 +73,42 @@ A partir de v6 se hacen algunos cambios:
 - Switch -> Routes
 - component -> element
 - {Componente} -> {<Componente/>}
+
+Dependiendo del entorno de ejecución (navegador, servidor, etc) se usará un componente distinto para envolver las rutas. En el caso del navegador se envuelve la ruta con el componente <BrowserRouter><BrowserRouter/>
+
+
+En el caso de una versión de react-router-dom anterior a v6, las rutas se declaran en los componentes <Route/> con los atributos exact path='/endpoint' y component={Componente}
+
+    <Route exact path='/endpoint' component={Component} / >
+
+Para manejar una página no encontrada se usará el mismo componente Route con solo el atributo component={Componente}
+
+    <Route component={Pagina404} / >
+
+Para manejar una terminación exacta de endpoint en todas las rutas se usa el componente <Switch><Switch/> para envolver todas las rutas
+
+    import {BrowserRouter, Switch, Route} from 'react-router-dom';
+    import Componente from '../components/Componente';
+    import Pagina404 from '../pages/Pagina404';
+
+    <BrowserRouter>
+        <Switch>
+            <Route exact path='/' component={Componente}>
+            <Route component={Componente}>
+        <Switch/>
+    <BrowserRouter/>
+
+Para usar el código anterior desde react-router-dom v6 se harán los siguientes cambios:
+
+    import {BrowserRouter, Routes, Route} from 'react-router-dom';
+    import Componente from '../components/Componente';
+    import Pagina404 from '../pages/Pagina404';
+
+    <BrowserRouter>
+        <Routes>
+            <Route path='/' element={<Componente/>}>
+            <Route path='*' element={<Pagina404/>}>
+        <Routes/>
+    <BrowserRouter/>
+
+Atención! En unas primeras pruebas no me funcionó con React17.
