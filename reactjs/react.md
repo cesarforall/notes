@@ -112,3 +112,54 @@ Para usar el código anterior desde react-router-dom v6 se harán los siguientes
     <BrowserRouter/>
 
 Atención! En unas primeras pruebas no me funcionó con React17.
+
+## Stateful vs. Stateless Components
+Dentro de React existen dos tipos de componentes, los smart o statefull, y los silly o stateless components.
+
+Los stateless components son componentes funcionales (se declaran con una función y reciben props).
+
+    import React from 'react';
+
+    function Componente(props) {
+        return (
+            <p>${props.example}</p>
+        )
+    }
+
+Los statefull components son componentes de clase, tienen como método obligatorio el render. Su comportamiento tiene un ciclo de vida.
+
+    import React from 'react';
+
+    class Component extends React.Component {
+        render() {
+            return <h1></h1>
+        }
+    }
+
+    import React, {Component} from 'react';
+
+    class Component extends Component {
+        render() {
+            return <h1></h1>
+        }
+    }
+
+El uso del método constructor y el state dentro del mismo han cambiado con la sintaxis de javascript moderno y la salida de los hooks.
+
+    import React from 'react';
+
+    class Component extends React.Component {
+        constructor(props) {
+            super(props);
+            this.state = {counter: 0};
+            this.handleClick = this.handleClick.bind(this);
+        }
+        handleClick(){
+            // ...
+        }
+        render(){
+            <>
+                <p>{this.state.counter}</p>
+            </p>
+        }
+    }
