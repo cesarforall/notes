@@ -32,6 +32,19 @@ npm install -nombre-del-paquete@latest -> instala la versión más actual de un 
 
 npm install -> instala los paquetes que estén declarados en package.json
 
+##
+Cambiar la configuración defecto globalmente
+    npm config set <Key> <Value> -g
+
+Cambiar el autor por defecto
+    npm config set init-author-email "cesaralmeida89@gmail.com" -g
+
+Cambiar la configuración por defecto
+    npm config set init-author-name "César Almeida" -g
+    npm config set init-author-url "https://github.com/cesarforall" -g
+    npm config set init-license "MIT" -g
+
+
 # ejecutar comandos
 
 La clave 'scripts' en el objeto json de package.json contiene como valor un objeto cuyo key será el alias de un comando y el value, el comando a ejecutar en la terminal.
