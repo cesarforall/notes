@@ -44,3 +44,11 @@ Crear el directorio public en la raiz con index.html
             <div id='app'></div>
         </body>
     </html>
+
+## Trabajndo con html
+
+    npm install html-loader html-webpack-plugin -D
+
+html-loader permite a webpack entender los archivos html. Se configura añadiendo una regla con el test: /\.html$/, loader: 'html-loader'.
+
+html-webpack-plugin crea un archivo html para dist a partir de un template (publc/index.html)
