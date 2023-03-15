@@ -52,3 +52,15 @@ Crear el directorio public en la raiz con index.html
 html-loader permite a webpack entender los archivos html. Se configura añadiendo una regla con el test: /\.html$/, loader: 'html-loader'.
 
 html-webpack-plugin crea un archivo html para dist a partir de un template (publc/index.html)
+
+## Trabajar con css
+
+    npm install mini-css-extract-plugin css-loader style-loader sass sass-loader -D
+
+css-loader recolecta todo el css de la aplicación y lo convierte a un string
+
+style-loader injecta el string que el css loader ha generado y lo inyenta en etiquetas style en el bundle.
+
+sass-loader carga archivos sass y los compila en css
+
+mini-css-extract-plugin extrae css de archivos separados y lo junta para servirlo como uno solo para servirlo donde se le requiere
