@@ -64,3 +64,41 @@ style-loader injecta el string que el css loader ha generado y lo inyenta en eti
 sass-loader carga archivos sass y los compila en css
 
 mini-css-extract-plugin extrae css de archivos separados y lo junta para servirlo como uno solo para servirlo donde se le requiere
+
+## Preparar el proyecto para producción
+
+    npm install css-minimizer-webpack-plugin terser-webpack-plugin clean-webpack-plugin -D
+
+Añadir las configuraciones en webpack.config.js
+
+    const CssMinimizerPlugin = require('css-minimizer-webpack-plugin');
+    const TerserPlugin = require('terser-webpack-plugin');
+    const { CleanWebpackPlugin } = require('clean-webpack-plugin');
+
+Añadir publicPath en output
+
+    	output: {
+    	path: path.resolve(__dirname, 'dist'),
+    	filename: 'bundle.js',
+    	publicPath: '/',
+        },
+
+Añadir los plugin
+
+    	plugins: [
+    	new HtmlWebpackPlugin({
+    		template: './public/index.html',
+    		filename: './index.html',
+    	}),
+    	new MiniCssExtractPlugin({
+    		filename: '[name].css',
+    	}),
+    	new CleanWebpackPlugin(),
+    ],
+
+Añadir optimization
+
+    optimization: {
+    	minimize: true,
+    	minimizer: [new CssMinimizerPlugin(), new TerserPlugin()],
+    },
