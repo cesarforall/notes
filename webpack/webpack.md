@@ -153,7 +153,7 @@ Luego se elimina cualquier script desde el html original porque webpack lo crear
 
 ## Webpack con css y preprocesadores
 
- npm install mini-css-extract-plugin css-loader style-loader sass -D -> para instalar los paquetes necesarios
+npm install mini-css-extract-plugin css-loader style-loader sass -D -> para instalar los paquetes necesarios
 
 webpack.confij.css
 
@@ -177,6 +177,43 @@ vars.styl
     color $color-black
 
 ### mini-css-extract-plugin
+
 Este plugin permite que webpack entienda un import de estilos (ruta) dentro de un módulo javascript o en el caso de react un módulo correcpondiente a un componente
 
     import './src/styles/Login.csss'
+
+## npx webpack init
+
+    npx webpack init
+
+    [webpack-cli] For using this command you need to install: '@webpack-cli/generators' package.
+    [webpack-cli] Would you like to install '@webpack-cli/generators' package? (That will run 'npm install -D @webpack-cli/generators') (Y/n)
+    devDependencies:
+
+    - @webpack-cli/generators 2.5.0
+    ? Which of the following JS solutions do you want to use? ES6
+    ? Do you want to use webpack-dev-server? Yes
+    ? Do you want to simplify the creation of HTML files for your bundle? Yes
+    ? Do you want to add PWA support? No
+    ? Which of the following CSS solutions do you want to use? CSS only
+    ? Will you be using PostCSS in your project? Yes
+    ? Do you want to extract CSS for every file? Only for Production
+    ? Do you like to install prettier to format generated configuration? Yes
+    ? Pick a package manager: pnpm
+    [webpack-cli] ℹ INFO Initialising project...
+
+    devDependencies:
+
+    - @babel/core 7.19.3
+    - @babel/preset-env 7.19.4
+    - autoprefixer 10.4.12
+    - babel-loader 8.2.5
+    - css-loader 6.7.1
+    - html-webpack-plugin 5.5.0
+    - mini-css-extract-plugin 2.6.1
+    - postcss 8.4.17
+    - postcss-loader 7.0.1
+    - prettier 2.7.1
+    - style-loader 3.3.1
+    - webpack-dev-server 4.11.1
+    [webpack-cli] Project has been initialised with webpack!
