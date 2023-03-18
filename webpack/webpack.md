@@ -217,3 +217,8 @@ Este plugin permite que webpack entienda un import de estilos (ruta) dentro de u
     - style-loader 3.3.1
     - webpack-dev-server 4.11.1
     [webpack-cli] Project has been initialised with webpack!
+
+## Copiar archivos con webpack
+
+    npm install copy-webpack-plugin -D
+
