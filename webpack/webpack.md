@@ -2,6 +2,14 @@
 
 Webpack empaqueta los archivos de un proyecto optimizando su rendimiento. Usa un punto de entrada y entiende el grafo del proyecto. Usa loaders y plugins para entender el código.
 
+Webpack empaqueta los modulos usados en un proyecto generando un archivo que puede usarse de forma estática.
+
+Como base entiende archivos JavaScript y JSON.
+
+Para que Webpack pueda entender otro tipo de archivos usa loaders. Los loaders se añaden en rules y requieren test y use. Test es una expresión regular que indica el tipo de archivo y use indica el nombre del paquete (loader) que se va a usar para entender dicho tipo de archivo.
+
+Para agregar funcionalidades se usa plugins. Estos se importan o requieren y se hace una instancia dentro de plugins.
+
 ## Loaders vs plugins
 
 Los loaders permiten a webpack trabajar con extensiones o tipos de archivos que no admite por defecto.
