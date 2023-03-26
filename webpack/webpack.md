@@ -230,3 +230,51 @@ Este plugin permite que webpack entienda un import de estilos (ruta) dentro de u
 
     npm install copy-webpack-plugin -D
 
+## Multicompiler
+
+La función multicompiler se usa cuando se requieren distintos outputs. Se exporta un array con varios objetos de configuración desde el archivo webpack.config.js
+
+Se le puede añadir un name a cada objeto para identificarlos en los mensajes de consola. Por defecto será main.
+
+    const path = require('path');
+    const HtmlWebpackPlugin = requiere('html-webpack-plugin');
+
+    module.exports = [
+        {
+            name: 'example-1',
+            entry: './src/index.js',
+            output: {
+                filename: 'main.js',
+                path: path.resolve(__dirname, 'dist'),
+            },
+            plugins: [
+                new HtmlWebpackPlugin({
+                    template: './public/index.html',
+                }),
+            ],
+        },
+        {
+            name: 'example-2',
+            entry: './src/otherPage/index.js',
+            output: {
+                filename: 'main.js',
+                path: path.resolve(__dirname, 'dist/otherPage'),
+            },
+            plugins: [
+                new HtmlWebpackPlugin({
+                    template: './public/index.html',
+                }),
+            ],
+        },
+    ];
+
+El resutado de ejecutar el comando build es:
+
+    dist/
+        otherPage
+            index.html
+            main.js
+        index.html
+        index.js
+
+Atención! Causa conflicto al ejecutar el server de Webpack.
