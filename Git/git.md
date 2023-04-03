@@ -49,6 +49,25 @@ Para acceder al estado del proyecto en un log se usa el string de la identificac
 
     git checkout id-del-commit
 
+    Note: switching to 'id-del-commit'.
+
+    You are in 'detached HEAD' state. You can look around, make experimental
+    changes and commit them, and you can discard any commits you make in this
+    state without impacting any branches by switching back to a branch.
+
+    If you want to create a new branch to retain commits you create, you may
+    do so (now or later) by using -c with the switch command. Example:
+
+    git switch -c <new-branch-name>
+
+    Or undo this operation with:
+
+    git switch -
+
+    Turn off this advice by setting config variable advice.detachedHead to false
+
+    HEAD is now at id-del-commit texto-del-commit
+
 Se puede realizar cualquier acción, incluso commits, dentro del log. Sin embargo para guardar el proceso se debe crear una nueva rama. Esta se crea con el comando:
 
      git switch -c nombre-de-la-nueva-rama
