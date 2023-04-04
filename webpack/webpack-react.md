@@ -141,3 +141,23 @@ Añadir optimization
         }),
     ],
     };
+
+## Eliminar el uso de import
+
+Actualmente no hace falta importar react en cada componente y es buena práctica no hacerlo. Para que se pueda compilar con webpack usando el loader de babel se añade la opción de runtime a automatic.
+
+    {
+    "presets": [
+        "@babel/preset-env",
+        [
+            "@babel/preset-react",
+            {
+                "runtime": "automatic"
+            }
+        ]
+    ],
+    "plugins": [
+        "@babel/plugin-transform-runtime"
+    ]
+
+}
