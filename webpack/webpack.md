@@ -139,9 +139,26 @@ Es la base de babel
 
 Trabaja javascript moderno
 
-### @babel/plugin-transfor-runtime
+### @babel/plugin-transform-runtime
 
-Trabaja con el asincronismo de javascript
+Trabaja con el asincronismo de javascript?
+Reutiliza el código para evitar duplicados y que ocupe menos la aplicación
+
+    {
+    "presets": [
+        "@babel/preset-env",
+        [
+            "@babel/preset-react",
+            {
+                "runtime": "automatic"
+            }
+        ]
+    ],
+    "plugins": [
+        "@babel/plugin-transform-runtime"
+    ]
+
+}
 
 ## Webpack con html
 
