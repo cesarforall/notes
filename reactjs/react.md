@@ -163,3 +163,8 @@ El uso del método constructor y el state dentro del mismo han cambiado con la s
             </p>
         }
     }
+
+## Elemento vs Componente
+Un componente es una función que al ejecutarla devueleve un elemento
+
+Un elemento es lo que devuelve la función y que es renderizado po React
