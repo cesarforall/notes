@@ -223,3 +223,43 @@ Importante, las props se pueden enviar como un objecto aunque es mala práctica
             </article>
         );
     }
+
+## Children
+Para renderizar elementos dentro de otros elementos se tiene que añadir la propiedad children en el componente.
+
+    export function TwitterFollowCard({ children, name, userName, isFollowing }) {
+        console.log(`${name} is following: ${isFollowing}`);
+        const imgSrc = `https://unavatar.io/${userName}`;
+        return (
+            <article className='tw-followCard'>
+                <header className='tw-followCard__header'>
+                    <img className='tw-followCard__avatar' src={imgSrc} alt={`El avatar de ${userName}`} />
+                    <div className='tw-followCard-info'>
+                        <strong>{name}</strong>
+                        <span>@{userName}</span>
+                        {children}
+                    </div>
+                </header>
+                <aside>
+                    <button>Seguir</button>
+                </aside>
+            </article>
+        );
+    }
+
+    import './App.css';
+    import { TwitterFollowCard } from './components/TwitterFollowCard';
+
+    export function App() {
+        const elonMusk = { isFollowing: false, name: 'Elon Musk', userName: 'elonmusk' };
+        return (
+            <div style={{ width: '320px' }}>
+                <TwitterFollowCard isFollowing name='César Almeida Reyes' userName='cesarforall' />
+                <TwitterFollowCard>
+                    <h1>Hello h1</h1>
+                </TwitterFollowCard>
+                <TwitterFollowCard isFollowing={false} name='Miguel Ángel Durán' userName='midudev' />
+                <TwitterFollowCard {...elonMusk} />
+            </div>
+        );
+    }
