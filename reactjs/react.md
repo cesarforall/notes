@@ -168,3 +168,58 @@ El uso del método constructor y el state dentro del mismo han cambiado con la s
 Un componente es una función que al ejecutarla devueleve un elemento
 
 Un elemento es lo que devuelve la función y que es renderizado po React
+
+## Props
+Las props o propiedades se reciben como parámetros en la función que crea el componente y los argumentos se envían en el elemento como si fueran atributos html
+
+    export function TwitterFollowCard({ name, userName, isFollowing }) {
+        console.log(`${name} is following: ${isFollowing}`);
+        const imgSrc = `https://unavatar.io/${userName}`;
+        return (
+            <article className='tw-followCard'>
+                <header className='tw-followCard__header'>
+                    <img className='tw-followCard__avatar' src={imgSrc} alt={`El avatar de ${userName}`} />
+                    <div className='tw-followCard-info'>
+                        <strong>{name}</strong>
+                        <span>@{userName}</span>
+                    </div>
+                </header>
+                <aside>
+                    <button>Seguir</button>
+                </aside>
+            </article>
+        );
+    }
+
+    import './App.css';
+    import { TwitterFollowCard } from './components/TwitterFollowCard';
+
+    export function App() {
+        return (
+            <div style={{ width: '320px' }}>
+                <TwitterFollowCard isFollowing name='César Almeida Reyes' userName='cesarforall' />
+                <TwitterFollowCard isFollowing={false} name='Miguel Ángel Durán' userName='midudev' />
+            </div>
+        );
+    }
+
+Importante, las props se pueden enviar como un objecto aunque es mala práctica
+
+    export function TwitterFollowCard({ name, userName, isFollowing }) {
+	console.log(`${name} is following: ${isFollowing}`);
+	const imgSrc = `https://unavatar.io/${userName}`;
+        return (
+            <article className='tw-followCard'>
+                <header className='tw-followCard__header'>
+                    <img className='tw-followCard__avatar' src={imgSrc} alt={`El avatar de ${userName}`} />
+                    <div className='tw-followCard-info'>
+                        <strong>{name}</strong>
+                        <span>@{userName}</span>
+                    </div>
+                </header>
+                <aside>
+                    <button>Seguir</button>
+                </aside>
+            </article>
+        );
+    }
