@@ -8,7 +8,11 @@ Es una sintaxis que usa javascript y XML para hacer ágil el desarrollo de compo
 
 ## Virtual DOM
 
-Es una copia de real DOM que maneja React para hacer comparaciones rápidas entre sí cuando hay cambios dinámicos en la aplicación. De este forma se renderiza solo los componentes que han cambiado.
+Es una copia de real DOM que maneja React para hacer comparaciones rápidas entre sí cuando hay cambios dinámicos en la aplicación.
+
+Se renderiza en el real DOM solo los componentes que han cambiado.
+
+La propagación de los componentes se realiza de padres a hijos. Al cambiar el estado de un padre se actualizan todos los hijos.
 
 ## Ciclo de vida
 
