@@ -286,3 +286,56 @@ Recibe un array de dos elementos. El primer elemento almacena el estado por defe
 La expresión equivalente se puede hacer de forma desestructurada
 
     const [isFollowing, setIsFollowing] = useState(false)
+
+## Prop como initial state
+
+El estado inicial de un componente puede ser puede ser una prop heredada de un elemento padre.
+
+App
+
+    import './App.css';
+    import { TwitterFollowCard } from './components/TwitterFollowCard';
+
+    export function App() {
+        return (
+            <div className='cardsContainer'>
+                <TwitterFollowCard initialIsFollowing={true} isFollowing name='César Almeida Reyes' userName='cesarforall' />
+                <TwitterFollowCard isFollowing={false} name='Miguel Ángel Durán' userName='midudev' />
+            </div>
+        );
+    }
+
+Componente
+
+    import { useState } from 'react';
+
+    export function TwitterFollowCard({ name, userName, initialIsFollowing }) {
+        const [isFollowing, setIsFollowing] = useState(initialIsFollowing);
+
+        console.log(`${name} is following: ${isFollowing}`);
+        const imgSrc = `https://unavatar.io/${userName}`;
+
+        const text = isFollowing ? 'Siguiendo' : 'Seguir';
+        const buttonClassName = isFollowing ? 'tw-followCard__button--isFollowing' : 'tw-followCard__button';
+
+        function handleClick() {
+            setIsFollowing(!isFollowing);
+        }
+
+        return (
+            <article className='tw-followCard'>
+                <header className='tw-followCard__header'>
+                    <img className='tw-followCard__avatar' src={imgSrc} alt={`El avatar de ${userName}`} />
+                    <div className='tw-followCard-info'>
+                        <strong>{name}</strong>
+                        <span>@{userName}</span>
+                    </div>
+                </header>
+                <aside>
+                    <button className={buttonClassName} onClick={handleClick}>
+                        {text}
+                    </button>
+                </aside>
+            </article>
+        );
+    }
