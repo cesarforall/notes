@@ -295,3 +295,18 @@ El resutado de ejecutar el comando build es:
         index.js
 
 Atención! Causa conflicto al ejecutar el server de Webpack.
+
+## Alias
+Los alias evitan repetir la ruta completa de en cada import
+
+    const path = require('path');
+
+    module.exports = {
+    // ...
+    resolve: {
+        alias: {
+        '@components': path.resolve(__dirname, 'src/components'),
+        '@utils': path.resolve(__dirname, 'src/utils')
+        }
+    }
+    }
