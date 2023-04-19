@@ -310,3 +310,21 @@ Los alias evitan repetir la ruta completa de en cada import
         }
     }
     }
+
+En webpack 5 no se usa el decorador @
+
+    const path = require('path');
+
+    module.exports = {
+    // ...
+    resolve: {
+        alias: {
+        components: path.resolve(__dirname, 'src/components/'),
+        utils: path.resolve(__dirname, 'src/utils/')
+        }
+    }
+    }
+
+Ejemplo en un módulo
+
+    import Header from 'components/Header'
