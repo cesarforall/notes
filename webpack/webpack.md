@@ -144,6 +144,8 @@ Trabaja javascript moderno
 Trabaja con el asincronismo de javascript?
 Reutiliza el código para evitar duplicados y que ocupe menos la aplicación
 
+- https://platzi.com/discusiones/2242-webpack/160507-no-entendi-muy-bien-para-que-sirve-babelplugin-transform-runtime/
+
     {
     "presets": [
         "@babel/preset-env",
