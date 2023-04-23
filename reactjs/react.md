@@ -370,3 +370,8 @@ El hook useEffect se usa para comunicar react con librerías o datos externos. P
             </section>
         );
     };
+
+## useRef
+Este hook almacena datos de un componente y el cambio de su valor no renderiza el componente com lo hace useState.
+
+Por ejemplo, se usa en formularios donde los datos recogidos en el input se recogen a medida que se rellenan los campos. Al dasr al botón de submit los datos se manejan con FormData y pueden enviarse una manera más segura sin volver a renderizar el componente.
