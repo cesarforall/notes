@@ -23,3 +23,15 @@ Se configura en un archivo .yml definiendo distintos servicios. Cada servicio es
         - POSTGRES_PASSWORD=admin123
         ports:
         - 5432:5342
+
+Se ejecuta con el comando
+
+    sudo docker-compose up -d postgres
+
+Se ven las imágenes corriendo con el comando:
+
+    sudo docker-compose ps
+
+Se baja el servicio con:
+
+    sudo docker-compose down
