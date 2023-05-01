@@ -5,3 +5,21 @@
 El plugin de compose se instala mejor de forma manual.
 
 - https://docs.docker.com/compose/install/linux/#install-the-plugin-manually
+
+## Cómo funciona
+
+docker-compose es un plugin que usa docker para organizar y ejecutar diferentes contenedores
+
+Se configura en un archivo .yml definiendo distintos servicios. Cada servicio es un contenedor
+
+    version: '3.3'
+
+    services:
+    postgres:
+        image: postgres:13
+        environment:
+        - POSTGRES_DB=my_store
+        - POSTGRES_USER=cesar
+        - POSTGRES_PASSWORD=admin123
+        ports:
+        - 5432:5342
