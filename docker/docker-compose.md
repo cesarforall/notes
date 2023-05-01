@@ -35,3 +35,26 @@ Se ven las imágenes corriendo con el comando:
 Se baja el servicio con:
 
     sudo docker-compose down
+
+## Estado
+Los contenedores de docker son stateless. Es decir, cuando el servicio se baja, todo lo realizado interiormente se elimina.
+
+## Persistencia de datos
+Para tener persistencia de datos con Docker se configura compose con volumes. Esta especificación configura una ruta donde almacenar datos.
+
+- https://hub.docker.com/_/postgres
+
+
+    version: '3.3'
+
+    services:
+    postgres:
+        image: postgres:13
+        environment:
+        - POSTGRES_DB=my_store
+        - POSTGRES_USER=cesar
+        - POSTGRES_PASSWORD=admin123
+        ports:
+        - 5432:5342
+        volumes:
+        - ./postgres_data:/var/lib/postgresql/data
