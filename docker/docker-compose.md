@@ -58,3 +58,25 @@ Para tener persistencia de datos con Docker se configura compose con volumes. Es
         - 5432:5342
         volumes:
         - ./postgres_data:/var/lib/postgresql/data
+
+## Entrar en un contenedor via terminal
+Iniciar el servicio
+
+    docker compose up -d nombre_del_servicio
+
+Entrar en el contenedor
+
+    docker compose exec nombre_del_servicio bash
+
+## Trabajar con Postgress
+Crear una base de datos
+
+    psql -h localhost -d my_store -U cesar
+
+Ver la estructura de la base de datos
+
+    \d+
+
+Salir de la base de datos
+
+    \q
