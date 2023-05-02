@@ -12,3 +12,10 @@ Ejecuta comandos directamente con apenas interactividad.
 
 curl -fsSL https://get.docker.com -o get-docker.sh
 sudo sh ./get-docker.sh --dry-run
+
+## Run Docker
+
+    sudo service docker start
+
+Comprobar si está funcionando
+    sudo service docker status
