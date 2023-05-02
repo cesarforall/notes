@@ -80,3 +80,37 @@ Ver la estructura de la base de datos
 Salir de la base de datos
 
     \q
+
+## Trabajar con Postgres de forma gráfica
+Añadir el servicio pgadmin
+
+    https://hub.docker.com/r/dpage/pgadmin4/
+
+    version: '3.3'
+
+    services:
+    postgres:
+        image: postgres:13
+        environment:
+        - POSTGRES_DB=my_store
+        - POSTGRES_USER=cesar
+        - POSTGRES_PASSWORD=admin123
+        ports:
+        - 5432:5432
+        volumes:
+        - ./postgres_data:/var/lib/postgresql/data
+    
+    pgadmin:
+        image: dpage/pgadmin4
+        environment:
+        - PGADMIN_DEFAULT_EMAIL=admin@mail.com
+        - PGADMIN_DEFAULT_PASSWORD=ROOT
+        ports:
+        - 5050:50
+
+Entrar con la IP eth0 en el navegador
+
+    ifconfig
+
+Usar las credenciales descritas en el archivo de configuración para el login.
+Conectar la base de datos postgress con pgadmin mediante la dirección ip, user y password
