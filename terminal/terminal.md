@@ -531,3 +531,15 @@ whatis -> muestra un descripción corta de un comando
 ## sudo
 Para evitar poner la contraseña de superuser todo el tiempo
 - https://www.flopy.es/evitar-que-el-comando-sudo-nos-pida-la-contrasena-en-gnu-linux/
+
+### commands
+
+ssh
+
+shred --flag nombre-del-archivo -> el archivo se sobreescribe para que sea irrecuperable
+
+rmdir -> elimina un directorio
+
+ln -s nombre_de_un_archivo nombre-> crea un link a un archivo
+
+    - https://www.youtube.com/watch?v=gd7BXuUQ91w
