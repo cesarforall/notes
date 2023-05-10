@@ -1,0 +1,1 @@
+show mac-address-table -> muestra la tabla de direcciones almacenadas en el switch
